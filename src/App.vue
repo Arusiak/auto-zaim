@@ -1,17 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <!--Route lazy Loading effect-->
+    <v-dialog
+            max-width="64px">
+      <v-card>
+        <v-card-text class="global-loader">
+          <v-progress-circular
+                  indeterminate></v-progress-circular>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
+    <v-main>
+      <router-view></router-view>
+      <Footer />
+    </v-main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/layout/Header.vue'
+import Footer from './components/layout/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Footer,
+    Header,
   }
 }
 </script>
