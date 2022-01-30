@@ -7,9 +7,9 @@
                         vertical
                         class="stepper-site">
                     <v-stepper-step
-                            :complete="e6 > 1"
-                            step="1"
-                            class="text-middle">
+                        :complete="e6 > 1"
+                        step="1"
+                        class="text-middle">
                         Рефинансирование
                     </v-stepper-step>
 
@@ -29,95 +29,95 @@
                         <v-row>
                             <v-col cols="12">
                                 <v-text-field
-                                        outlined
-                                        label="Сумма займа"
-                                        class="custom-input"
-                                        v-model="zaimSummary"
-                                        :rules="zaimSummaryRules">
+                                    outlined
+                                    label="Сумма займа"
+                                    class="custom-input"
+                                    v-model="zaimSummary"
+                                    :rules="zaimSummaryRules">
                                 </v-text-field>
                             </v-col>
                         </v-row>
                         <v-row>
-                            <v-col cols="12">
+                            <v-col cols="12" style="margin-top: -15px">
                                 <v-text-field
-                                        outlined
-                                        label="Срок займа"
-                                        class="custom-input"
-                                        v-model="zaimLimit"
-                                        :rules="zaimLimitRules">
+                                    outlined
+                                    label="Срок займа"
+                                    class="custom-input"
+                                    v-model="zaimLimit"
+                                    :rules="zaimLimitRules">
                                 </v-text-field>
                             </v-col>
                         </v-row>
-                        <v-row>
+                        <v-row style="margin-top: -15px">
                             <v-col cols="12">
                                 <v-text-field
-                                        outlined
-                                        label="Комфортный платёж"
-                                        class="custom-input"
-                                        v-model="platoj"
-                                        :rules="platojRules">
+                                    outlined
+                                    label="Комфортный платёж"
+                                    class="custom-input"
+                                    v-model="platoj"
+                                    :rules="platojRules">
                                 </v-text-field>
                             </v-col>
                         </v-row>
-                        <v-row>
+                        <v-row style="margin-top: -15px">
                             <v-col cols="12">
                                 <v-text-field
-                                        outlined
-                                        label="Месячный доход"
-                                        class="custom-input"
-                                        v-model="doxod"
-                                        :rules="doxodRules">
+                                    outlined
+                                    label="Месячный доход"
+                                    class="custom-input"
+                                    v-model="doxod"
+                                    :rules="doxodRules">
                                 </v-text-field>
                             </v-col>
                         </v-row>
-                        <v-row>
+                        <v-row style="margin-top: -15px">
                             <v-col cols="12">
                                 <v-text-field
-                                        outlined
-                                        label="Платежи по текущим кредитам"
-                                        class="custom-input"
-                                        v-model="credits"
-                                        :rules="creditsRules">
+                                    outlined
+                                    label="Платежи по текущим кредитам"
+                                    class="custom-input"
+                                    v-model="credits"
+                                    :rules="creditsRules">
                                 </v-text-field>
                             </v-col>
                         </v-row>
-                        <v-row>
+                        <v-row style="margin-top: -15px">
                             <v-col cols="12">
                                 <v-text-field
-                                        outlined
-                                        label="Дополнительный телефон"
-                                        class="custom-input"
-                                        v-model="phone"
-                                        :rules="phoneRules">
+                                    outlined
+                                    label="Дополнительный телефон"
+                                    class="custom-input"
+                                    v-model="phone"
+                                    :rules="phoneRules">
                                 </v-text-field>
                             </v-col>
                         </v-row>
-                        <v-row>
+                        <v-row style="margin-top: -15px">
                             <v-col cols="12">
                                 <v-text-field
-                                        outlined
-                                        label="Номер авто"
-                                        class="custom-input">
+                                    outlined
+                                    label="Номер авто"
+                                    class="custom-input">
                                 </v-text-field>
                             </v-col>
                         </v-row>
-                        <v-row>
+                        <v-row style="margin-top: -15px">
                             <v-col cols="12">
                                 <v-text-field
-                                        outlined
-                                        label="Электронная почта"
-                                        class="custom-input"
-                                        v-model="email"
-                                        :rules="emailRules">
+                                    outlined
+                                    label="Электронная почта"
+                                    class="custom-input"
+                                    v-model="email"
+                                    :rules="emailRules">
                                 </v-text-field>
                             </v-col>
                         </v-row>
-                        <v-row class="">
+                        <v-row class="" style="margin-top: -15px">
                             <v-col cols="12" class="">
                                 <router-link :to="{name: 'insert-data2'}" style="text-decoration: none">
                                     <v-btn
-                                            depressed
-                                            class="green-btn pa-6">
+                                        depressed
+                                        class="green-btn pa-6">
                                         Продолжить
                                     </v-btn>
                                 </router-link>
@@ -126,21 +126,20 @@
                     </v-stepper-content>
 
                     <v-stepper-step
-                            :complete="e6 > 2"
-                            step="2"
-                            class="text-middle">
+                        :complete="e6 > 2"
+                        step="2"
+                        class="text-middle">
                         Займ под ПТС
                     </v-stepper-step>
 
                     <v-stepper-content step="2">
 
-
                     </v-stepper-content>
 
                     <v-stepper-step
-                            :complete="e6 > 3"
-                            step="3"
-                            class="text-middle">
+                        :complete="e6 > 3"
+                        step="3"
+                        class="text-middle">
                         Аренда с выкупом
                     </v-stepper-step>
 
@@ -148,9 +147,9 @@
 
                     </v-stepper-content>
                     <v-stepper-step
-                            :complete="e6 > 4"
-                            step="4"
-                            class="text-middle">
+                        :complete="e6 > 4"
+                        step="4"
+                        class="text-middle">
                         Кредит под залог автомобиля
                     </v-stepper-step>
 

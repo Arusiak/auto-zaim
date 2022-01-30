@@ -20,8 +20,8 @@
                 <v-col cols="6" sm="4" md="5" class="mt-5">
                     <router-link :to="{name: 'app-home'}" style="text-decoration: none">
                         <v-btn
-                                depressed
-                                class="green-btn pa-6">
+                            depressed
+                            class="green-btn pa-6">
                             Внести оплату
                         </v-btn>
                     </router-link>
@@ -48,8 +48,8 @@
                 <v-col cols="6" sm="4" md="5" class="mt-5">
                     <router-link :to="{name: 'app-home'}" style="text-decoration: none">
                         <v-btn
-                                depressed
-                                class="green-btn pa-6">
+                            depressed
+                            class="green-btn pa-6">
                             Оформить
                         </v-btn>
                     </router-link>

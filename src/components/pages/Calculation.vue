@@ -10,8 +10,8 @@
                 <span>ежемесячная ставка</span>
             </v-col>
             <v-col md="4" sm="4" cols="12" class="text-right">
-                <p class=""><b><span class="page-title">15</span>мин.</b></p>
-                <span>на вынесение решения</span>
+                <p class="sm-text-left"><b><span class="page-title">15</span>мин.</b></p>
+                <p class="sm-text-left p-small">на вынесение решения</p>
             </v-col>
         </v-row>
         <v-row class="mt-10">
@@ -62,22 +62,22 @@
                                     <v-row>
                                         <v-col class="">
                                             <v-slider
-                                                    outline
-                                                    v-model="slider"
-                                                    class="align-center number-slider"
-                                                    :max="max"
-                                                    :min="min"
-                                                    color="green"
-                                                    hide-details>
+                                                outline
+                                                v-model="slider"
+                                                class="align-center number-slider"
+                                                :max="max"
+                                                :min="min"
+                                                color="green"
+                                                hide-details>
                                                 <template v-slot:append>
                                                     <v-text-field
-                                                            v-model="slider"
-                                                            class="mt-0 pt-0"
-                                                            hide-details
-                                                            single-line
-                                                            type="number"
-                                                            style="width: 60px; border: none !important;"
-                                                    ></v-text-field>
+                                                        v-model="slider"
+                                                        class="mt-0 pt-0"
+                                                        hide-details
+                                                        single-line
+                                                        type="number"
+                                                        style="width: 60px; border: none !important;">
+                                                    </v-text-field>
                                                 </template>
                                             </v-slider>
                                         </v-col>
@@ -91,22 +91,21 @@
                                     <v-row>
                                         <v-col class="">
                                             <v-slider
-                                                    outline
-                                                    v-model="slider"
-                                                    class="align-center number-slider"
-                                                    :max="max"
-                                                    :min="min"
-                                                    hide-details
-                                                    color="green">
+                                                outline
+                                                v-model="slider"
+                                                class="align-center number-slider"
+                                                :max="max"
+                                                :min="min"
+                                                hide-details
+                                                color="green">
                                                 <template v-slot:append>
                                                     <v-text-field
-                                                            v-model="slider"
-                                                            class="mt-0 pt-0"
-                                                            hide-details
-                                                            single-line
-                                                            type="number"
-                                                            style="width: 60px"
-                                                    ></v-text-field>
+                                                        v-model="slider"
+                                                        class="mt-0 pt-0"
+                                                        hide-details
+                                                        single-line
+                                                        type="number"
+                                                        style="width: 60px"></v-text-field>
                                                 </template>
                                             </v-slider>
                                         </v-col>
@@ -120,25 +119,23 @@
                                     <v-row>
                                         <v-col class="">
                                             <v-slider
-                                                    outline
-                                                    v-model="slider"
-                                                    class="align-center number-slider"
-                                                    :max="max"
-                                                    :min="min"
-                                                    hide-details
-                                                    color="green">
+                                                outline
+                                                v-model="slider"
+                                                class="align-center number-slider"
+                                                :max="max"
+                                                :min="min"
+                                                hide-details
+                                                color="green">
                                                 <template v-slot:append>
                                                     <v-text-field
-                                                            v-model="slider"
-                                                            class="mt-0 pt-0"
-                                                            hide-details
-                                                            single-line
-                                                            type="number"
-                                                            style="width: 60px"
-                                                    ></v-text-field>
+                                                        v-model="slider"
+                                                        class="mt-0 pt-0"
+                                                        hide-details
+                                                        single-line
+                                                        type="number"
+                                                        style="width: 60px"></v-text-field>
                                                 </template>
                                             </v-slider>
-
                                         </v-col>
                                     </v-row>
                                 </v-card-text>

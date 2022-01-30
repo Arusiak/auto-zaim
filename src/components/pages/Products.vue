@@ -26,8 +26,8 @@
                         <v-col md="6" cols="12">
                             <router-link target= '_blank' :to="{name: 'refinancing'}" style="text-decoration: none">
                                 <v-btn
-                                        depressed
-                                        class="green-btn">
+                                    depressed
+                                    class="green-btn">
                                     Получить
                                 </v-btn>
                             </router-link>

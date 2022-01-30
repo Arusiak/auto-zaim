@@ -36,10 +36,10 @@
                                 </v-col>
                                 <v-col md="4" cols="12">
                                     <v-btn
-                                            class="outlined-btn-green mt-2"
-                                            outlined>
+                                        class="outlined-btn-green mt-2"
+                                        outlined>
                                         <v-icon
-                                                color="black">
+                                            color="black">
                                             mdi-star
                                         </v-icon>
                                         Сохранить в избранное

@@ -403,7 +403,14 @@ border: none !important;
     color: #1A1D1A;
 }
 .custom-input > .v-input__control > .v-input__slot > .v-text-field__slot > .primary--text{
-    color: black !important;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #4F4F4F !important;
+    caret-color: #4F4F4F !important;
+    opacity: 0.5;
 }
 .v-application .custom-input{
     color: black !important;
@@ -436,6 +443,7 @@ border: none !important;
     color: black !important;
     caret-color: black !important;
 }
+
 @media screen and (max-width: 1223px) {
     .platoj{
         display: none;
@@ -458,6 +466,11 @@ border: none !important;
     }
     .slick-dots > li{
         padding-left: 3px;
+    }
+}
+@media screen and (max-width: 959px) {
+    .site-logo {
+        width: 79px;
     }
 }
 @media screen and (max-width: 848px) {
@@ -535,6 +548,11 @@ border: none !important;
     .media-dialog{
         padding-left: 40px !important;
         padding-right: 40px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .sm-text-left{
+        text-align: left;
     }
 }
 @media screen and (max-width: 555px) {

@@ -14,17 +14,17 @@
             <v-col cols="12" class="mt-5">
                 <router-link :to="{name: 'welcome-home', params: { show: false }}" style="text-decoration: none">
                     <v-btn
-                            v-if="!alreadyPaid"
-                            depressed
-                            class="green-btn pa-6">
+                        v-if="!alreadyPaid"
+                        depressed
+                        class="green-btn pa-6">
                         Продолжить оформление
                     </v-btn>
                 </router-link>
                 <router-link :to="{name: 'welcome-home', params: { show: true }}" style="text-decoration: none">
                     <v-btn
-                            v-if="alreadyPaid"
-                            depressed
-                            class="green-btn pa-6">
+                        v-if="alreadyPaid"
+                        depressed
+                        class="green-btn pa-6">
                         Оформить
                     </v-btn>
                 </router-link>
@@ -32,8 +32,8 @@
             <v-col cols="12" class="mt-3">
                 <router-link :to="{name: 'app-home'}" style="text-decoration: none">
                     <v-btn
-                            class="outlined-btn-green pa-6"
-                            outlined>
+                        class="outlined-btn-green pa-6"
+                        outlined>
                         Личный кабинет
                     </v-btn>
                 </router-link>

@@ -20,8 +20,8 @@
                 </h3>
                 <p class="page-description-big">Объедините несколько кредитов в один</p>
                 <v-btn
-                        depressed
-                        class="green-btn mt-10">
+                    depressed
+                    class="green-btn mt-10">
                     Получить
                 </v-btn>
             </v-col>

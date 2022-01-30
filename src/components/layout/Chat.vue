@@ -21,11 +21,11 @@
                             <img :src="chatImg"/>
                         </div>
                     </v-col>
-                    <v-col cols="7">
+                    <v-col cols="7" class="mobil-col-8">
                         <p class="p-small" style="color: #FFFFFF">Игорь</p>
                         <span class="text-white-small opacity0-5">Консультант</span>
                     </v-col>
-                    <v-col cols="1" class="closed-icon">
+                    <v-col cols="1" class="closed-icon mobil-col-2">
                         <v-btn
                             icon
                             @click="toggleDrawer">
@@ -72,10 +72,11 @@
                 <div class="chat-footer mt-4">
                     <v-row class="align-center px-3" style="height: 46px">
                         <v-col cols="10">
-                            <v-text-field v-model="sms"
-                                          :rules="smsRules"
-                                          class="text-black-xs chat-input-text"
-                                          placeholder="Введите сообщение"></v-text-field>
+                            <v-text-field
+                                v-model="sms"
+                                :rules="smsRules"
+                                class="text-black-xs chat-input-text"
+                                placeholder="Введите сообщение"></v-text-field>
                         </v-col>
                         <v-col cols="1">
                             <v-btn style="height: auto; min-width: auto; padding: unset;">
@@ -86,9 +87,8 @@
                     <v-row class="align-center">
                         <v-col cols="1" class="ml-2">
                             <v-file-input
-                                    hide-input
-                                    truncate-length="15"
-                            ></v-file-input>
+                                hide-input
+                                truncate-length="15"></v-file-input>
                         </v-col>
                         <v-col cols="1" class="mt-4">
                             <img :src="otherImg"/>

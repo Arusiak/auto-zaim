@@ -9,7 +9,7 @@
                                 :to="{name: 'app-home'}"
                                 class="d-flex align-center"
                                 style="text-decoration: none">
-                                <img :src="appLogo"/>
+                                <img :src="appLogo" class="site-logo"/>
                                 <span class="logo-name">AUTO<b class="text-green">zaim</b>.ru</span>
                             </router-link>
                         </v-toolbar-title>
@@ -55,15 +55,14 @@
                                 </v-col>
                                 <v-col>
                                     <v-select
-                                            item-text="title"
-                                            :items="items"
-                                            outlined
-                                            label="Внести платёж"
-                                            class="font-12 green-select mt-1"
-                                    />
+                                        item-text="title"
+                                        :items="items"
+                                        outlined
+                                        label="Внести платёж"
+                                        class="font-12 green-select mt-1"/>
                                 </v-col>
                                 <v-col>
-                                    <router-link :to="{name: 'insert-data1'}" style="text-decoration: none">
+                                    <router-link :to="{name: 'insert-data1'}" target= '_blank' style="text-decoration: none">
                                         <v-btn
                                             depressed
                                             class="green-btn pa-3 font-12 mt-1">
@@ -88,9 +87,9 @@
                                 mdi-menu
                             </v-icon>
                             <v-icon
-                                    v-if="!showMenu"
-                                    @click="toggleDrawer"
-                                    color="black">
+                                v-if="!showMenu"
+                                @click="toggleDrawer"
+                                color="black">
                                 mdi-close
                             </v-icon>
                         </v-app-bar-nav-icon>
@@ -132,18 +131,17 @@
                             <v-row class="justify-center">
                                 <v-col sm="3" cols="4">
                                     <v-select
-                                            item-text="title"
-                                            :items="items"
-                                            outlined
-                                            label="Внести платёж"
-                                            class="font-12 green-select mt-1"
-                                    ></v-select>
+                                        item-text="title"
+                                        :items="items"
+                                        outlined
+                                        label="Внести платёж"
+                                        class="font-12 green-select mt-1"></v-select>
                                 </v-col>
                                 <v-col cols="2">
                                     <router-link :to="{name: 'insert-data1'}" target= '_blank' style="text-decoration: none">
                                         <v-btn
-                                                depressed
-                                                class="green-btn pa-3 font-12 mt-1">
+                                            depressed
+                                            class="green-btn pa-3 font-12 mt-1">
                                             Получить займ
                                         </v-btn>
                                     </router-link>

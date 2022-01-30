@@ -4,8 +4,8 @@
             <v-col cols="6">
                 <router-link :to="{name: 'primaryAthorization'}" target= '_blank' style="text-decoration: none">
                     <v-icon
-                            size="20"
-                            color="green">
+                        size="20"
+                        color="green">
                         mdi-chevron-left
                     </v-icon>
                     <span>Назад</span>
@@ -20,11 +20,11 @@
         <v-row class="justify-center">
             <v-col md="6" cols="8" class="">
                 <v-text-field
-                        outlined
-                        label="Код из смс"
-                        class="custom-input"
-                        v-model="code"
-                        :rules="codeRules">
+                    outlined
+                    label="Код из смс"
+                    class="custom-input"
+                    v-model="code"
+                    :rules="codeRules">
                 </v-text-field>
             </v-col>
         </v-row>
@@ -32,8 +32,8 @@
             <v-col cols="12" class="mt-5">
                 <router-link :to="{name: 'app-home'}" style="text-decoration: none">
                     <v-btn
-                            depressed
-                            class="green-btn pa-6">
+                        depressed
+                        class="green-btn pa-6">
                         Продолжить
                     </v-btn>
                 </router-link>

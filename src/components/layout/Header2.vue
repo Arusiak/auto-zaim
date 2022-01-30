@@ -1,6 +1,6 @@
 <template>
     <v-container class="header2">
-        <v-app-bar color="white" app class="pt-2">
+        <v-app-bar color="white" app class="pt-2 pb-15">
         <v-row style=" width: 100%;" class="align-center" v-if="this.$route.name === 'app-home'">
             <v-col cols="1" class="d-flex">
                 <router-link
@@ -23,32 +23,31 @@
                         <v-col cols="4" class="md-custom2">
                             <b class="header-bar-item font-17">8 800-505-21-65</b><br/>
                             <v-icon
-                                    size="20"
-                                    color="green">
+                                size="20"
+                                color="green">
                                 mdi-phone
                             </v-icon>
                             <a
-                                    class="link-green"
-                                    target="_blank"
-                                    style="text-decoration: none"
-                                    @click.stop="dialog = true">
+                                class="link-green"
+                                target="_blank"
+                                style="text-decoration: none"
+                                @click.stop="dialog = true">
                                 Заказать звонок
                             </a>
                         </v-col>
                         <v-col cols="3" class="mt-14 platoj">
                             <v-select
-                                    item-text="title"
-                                    :items="items"
-                                    outlined
-                                    label="Внести платёж"
-                                    class="font-12 green-select mt-1"
-                            />
+                                item-text="title"
+                                :items="items"
+                                outlined
+                                label="Внести платёж"
+                                class="font-12 green-select mt-1"/>
                         </v-col>
                         <v-col cols="3" class="md-custom1">
                             <router-link :to="{name: 'insert-data1'}" style="text-decoration: none">
                                 <v-btn
-                                        depressed
-                                        class="green-btn pa-3 font-12 mt-1">
+                                    depressed
+                                    class="green-btn pa-3 font-12 mt-1">
                                     Получить займ
                                 </v-btn>
                             </router-link>

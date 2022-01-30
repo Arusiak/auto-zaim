@@ -18,8 +18,7 @@
                     <v-col md="6" sm="4" cols="6" class="text-align-right">
                         <p class="404">
                             <v-img
-                                :src="errLogo"
-                            />
+                                :src="errLogo"/>
                         </p>
                     </v-col>
                 </v-row>

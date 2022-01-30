@@ -6,8 +6,8 @@
             </v-col>
             <v-col cols="1">
                 <v-btn
-                        icon
-                        @click="$emit('onClose')">
+                    icon
+                    @click="$emit('onClose')">
                     <v-icon>mdi-close</v-icon>
                 </v-btn>
             </v-col>

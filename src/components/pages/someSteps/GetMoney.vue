@@ -8,15 +8,15 @@
         <v-row class="justify-center">
             <v-col md="6" cols="8" class="">
                 <v-text-field
-                        outlined
-                        label="Номер телефона"
-                        class="custom-input"
-                        v-model="phone"
-                        :rules="phoneRules">
+                    outlined
+                    label="Номер телефона"
+                    class="custom-input"
+                    v-model="phone"
+                    :rules="phoneRules">
                 </v-text-field>
             </v-col>
         </v-row>
-        <v-row class="justify-center text-center mb-15">
+        <v-row class="justify-center text-center mb-15" style="margin-top: -35px">
             <v-col md="6" cols="8">
                 <v-checkbox class="border-green">
                     <template v-slot:label>
@@ -25,10 +25,10 @@
                             <v-tooltip bottom>
                                 <template v-slot:activator="{ on }">
                                     <a
-                                            class="link-green"
-                                            target="_blank"
-                                            @click.stop
-                                            v-on="on">
+                                        class="link-green"
+                                        target="_blank"
+                                        @click.stop
+                                        v-on="on">
                                         политикой конфиденциальности
                                     </a>
                                 </template>
@@ -41,8 +41,8 @@
             <v-col cols="12" class="mt-5">
                 <router-link :to="{name: 'sms-code'}" style="text-decoration: none">
                     <v-btn
-                            depressed
-                            class="green-btn pa-6">
+                        depressed
+                        class="green-btn pa-6">
                         Продолжить
                     </v-btn>
                 </router-link>

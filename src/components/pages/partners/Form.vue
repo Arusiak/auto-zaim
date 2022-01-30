@@ -6,63 +6,61 @@
             </v-col>
         </v-row>
         <v-form
-                ref="form"
-                v-model="valid"
-                lazy-validation
-        >
+            ref="form"
+            v-model="valid"
+            lazy-validation>
         <v-row>
             <v-col md="8" sm="12">
                 <v-row class="mt-0">
                     <v-col md="6" cols="12">
                         <v-text-field
-                                outlined
-                                v-model="Fio"
-                                :rules="fioRules"
-                                label="Ваше ФИО"
-                                class="custom-input">
+                            outlined
+                            v-model="Fio"
+                            :rules="fioRules"
+                            label="Ваше ФИО"
+                            class="custom-input">
                         </v-text-field>
                     </v-col>
                     <v-col md="6" cols="12">
                         <v-text-field
-                                outlined
-                                v-model="sfera"
-                                :rules="sferaRules"
-                                label="Сфера деятельности"
-                                class="custom-input">
+                            outlined
+                            v-model="sfera"
+                            :rules="sferaRules"
+                            label="Сфера деятельности"
+                            class="custom-input">
                         </v-text-field>
                     </v-col>
                 </v-row>
                 <v-row class="mt-0">
                     <v-col md="6" cols="12">
                         <v-text-field
-                                outlined
-                                v-model="phone"
-                                :rules="phoneRules"
-                                label="Телефон"
-                                class="custom-input">
+                            outlined
+                            v-model="phone"
+                            :rules="phoneRules"
+                            label="Телефон"
+                            class="custom-input">
                         </v-text-field>
                     </v-col>
                     <v-col md="6" cols="12">
                         <v-text-field
-                                outlined
-                                v-model="email"
-                                :rules="emailRules"
-                                label="Email"
-                                class="custom-input">
+                            outlined
+                            v-model="email"
+                            :rules="emailRules"
+                            label="Email"
+                            class="custom-input">
                         </v-text-field>
                     </v-col>
                 </v-row>
                 <v-row class="mt-0">
                     <v-col md="12">
                         <v-textarea
-                                v-model="sms"
-                                :rules="smsRules"
-                                required
-                                label="Ваше сообщение"
-                                auto-grow
-                                outlined
-                                class="custom-input"
-                        ></v-textarea>
+                            v-model="sms"
+                            :rules="smsRules"
+                            required
+                            label="Ваше сообщение"
+                            auto-grow
+                            outlined
+                            class="custom-input"></v-textarea>
                     </v-col>
                 </v-row>
             </v-col>
@@ -75,9 +73,9 @@
         <v-row class="align-center mt-0">
             <v-col md="2" sm="12" cols="12">
                 <v-btn
-                        depressed
-                        class="green-btn"
-                        @click="submit">
+                    depressed
+                    class="green-btn"
+                    @click="submit">
                     Отправить
                 </v-btn>
             </v-col>
@@ -89,11 +87,11 @@
                             <v-tooltip bottom>
                                 <template v-slot:activator="{ on }">
                                     <a
-                                            class="link-green"
-                                            target="_blank"
-                                            href="https://vuetifyjs.com"
-                                            @click.stop
-                                            v-on="on">
+                                        class="link-green"
+                                        target="_blank"
+                                        href="https://vuetifyjs.com"
+                                        @click.stop
+                                        v-on="on">
                                         согласие
                                     </a>
                                 </template>

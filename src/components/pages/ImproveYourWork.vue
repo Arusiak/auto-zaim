@@ -24,33 +24,33 @@
                 <v-row class="mt-0">
                     <v-col md="6">
                         <v-text-field
-                                outlined
-                                label="Телефон"
-                                class="custom-input"
-                                v-model="phone"
-                                :rules="phoneRules">
+                            outlined
+                            label="Телефон"
+                            class="custom-input"
+                            v-model="phone"
+                            :rules="phoneRules">
                         </v-text-field>
                     </v-col>
                     <v-col md="6">
                         <v-text-field
-                                outlined
-                                v-model="email"
-                                :rules="emailRules"
-                                label="Email"
-                                class="custom-input">
+                            outlined
+                            v-model="email"
+                            :rules="emailRules"
+                            label="Email"
+                            class="custom-input">
                         </v-text-field>
                     </v-col>
                 </v-row>
                 <v-row class="mt-0">
                     <v-col md="12">
                         <v-textarea
-                                label="Ваше сообщение"
-                                auto-grow
-                                outlined
-                                class="custom-input"
-                                v-model="sms"
-                                :rules="smsRules"
-                        ></v-textarea>
+                            label="Ваше сообщение"
+                            auto-grow
+                            outlined
+                            class="custom-input"
+                            v-model="sms"
+                            :rules="smsRules">
+                        </v-textarea>
                     </v-col>
                 </v-row>
             </v-col>

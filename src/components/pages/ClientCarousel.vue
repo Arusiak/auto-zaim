@@ -84,7 +84,6 @@
                             breakpoint: 576,
                             settings: {
                                 arrows: false,
-                                centerMode: true,
                                 slidesToShow: 1
                             }
                         }

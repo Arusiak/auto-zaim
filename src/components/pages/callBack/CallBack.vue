@@ -7,30 +7,29 @@
             <v-col cols="1" class="px-2">
                 <v-btn
                     icon
-                    @click="$emit('onClose')"
-                >
+                    @click="$emit('onClose')">
                     <v-icon>mdi-close</v-icon>
                 </v-btn>
             </v-col>
         </v-row>
         <v-text-field
-                outlined
-                label="Ваше ФИО"
-                class="custom-input"
-                v-model="fio"
-                :rules="fioRules">
+            outlined
+            label="Ваше ФИО"
+            class="custom-input"
+            v-model="fio"
+            :rules="fioRules">
         </v-text-field>
         <v-text-field
-                outlined
-                label="Телефон"
-                class="custom-input"
-                v-model="phone"
-                :rules="phoneRules">
+            outlined
+            label="Телефон"
+            class="custom-input"
+            v-model="phone"
+            :rules="phoneRules">
         </v-text-field>
         <v-btn
-                @click.stop="dialog = true"
-                depressed
-                class="green-btn">
+            @click.stop="dialog = true"
+            depressed
+            class="green-btn">
             Отправить запрос
         </v-btn>
         <v-checkbox class="border-green">
@@ -40,11 +39,11 @@
                     <v-tooltip bottom>
                         <template v-slot:activator="{ on }">
                             <a
-                                    class="link-green"
-                                    target="_blank"
-                                    href="https://vuetifyjs.com"
-                                    @click.stop
-                                    v-on="on">
+                                class="link-green"
+                                target="_blank"
+                                href="https://vuetifyjs.com"
+                                @click.stop
+                                v-on="on">
                                 согласие
                             </a>
                         </template>

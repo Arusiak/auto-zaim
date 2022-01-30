@@ -6,8 +6,8 @@
                     <v-col cols="12">
                         <router-link :to="{name: 'insert-data1'}" style="text-decoration: none">
                             <v-icon
-                                    size="20"
-                                    color="green">
+                                size="20"
+                                color="green">
                                 mdi-chevron-left
                             </v-icon>
                             <span>Назад</span>
@@ -29,15 +29,15 @@
                 <v-row class="justify-center">
                     <v-col md="12" cols="12" class="">
                         <v-text-field
-                                v-model="address"
-                                :rules="addressRules"
-                                outlined
-                                label="Адрес регистрации"
-                                class="custom-input">
+                            v-model="address"
+                            :rules="addressRules"
+                            outlined
+                            label="Адрес регистрации"
+                            class="custom-input">
                         </v-text-field>
                     </v-col>
                 </v-row>
-                <v-row class="justify-center">
+                <v-row class="justify-center" style="margin-top: -25px">
                     <v-col md="12" cols="12">
                         <v-checkbox class="border-green" v-model="checked">
                             <template v-slot:label>
@@ -51,11 +51,11 @@
                 <v-row class="justify-center">
                     <v-col md="12" cols="12" v-if="checked">
                         <v-text-field
-                                v-model="address2"
-                                :rules="address2Rules"
-                                outlined
-                                label="Адрес жительства"
-                                class="custom-input">
+                            v-model="address2"
+                            :rules="address2Rules"
+                            outlined
+                            label="Адрес жительства"
+                            class="custom-input">
                         </v-text-field>
                     </v-col>
                 </v-row>
@@ -63,8 +63,8 @@
                     <v-col cols="12" class="mt-5">
                         <router-link :to="{name: 're-authorization'}" style="text-decoration: none">
                             <v-btn
-                                    depressed
-                                    class="green-btn pa-6">
+                                depressed
+                                class="green-btn pa-6">
                                 Продолжить
                             </v-btn>
                         </router-link>
