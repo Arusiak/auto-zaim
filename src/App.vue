@@ -31,17 +31,6 @@ export default {
     scrollpx: 0,
     scrolledToBottom: false
   }),
-  // methods: {
-  //   handleScroll() {
-  //     this.scrollpx = window.scrollY;
-  //   }
-  // },
-  // created() {
-  //   window.addEventListener('scroll', this.handleScroll);
-  // },
-  // destroyed() {
-  //   window.removeEventListener('scroll', this.handleScroll);
-  // }
   methods: {
     scroll () {
       window.onscroll = () => {
@@ -59,14 +48,6 @@ export default {
   mounted () {
     this.scroll()
   }
-
-  // window.addEventListener("scroll", function () {
-  //     let header = document.querySelector(".header1");
-  //     let header2 = document.querySelector(".header2");
-  //     header.classList.toggle("d-none", window.scrollY > 0)
-  //     header2.classList.toggle("d-block", window.scrollY > 0)
-  //   })
-  // }
 };
 
 </script>
