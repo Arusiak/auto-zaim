@@ -8,29 +8,63 @@ Vue.use(VueRouter);
 let routes = [
     {
         path: '/',
-        redirect: '/home',
         name: 'app-home',
+        component: () => import('./components/Home'),
     },
     {
-        path: '/home',
-        name: 'home',
-        meta: {
-            type: 'landing',
-            authentication: 'none'
-        },
-        component: () => import('./components/HelloWorld'),
+        path: '/currentClients',
+        name: 'current-clients',
+        component: () => import('./components/CurrentClients'),
     },
     {
-        path: '/page-not-found',
-        name: 'page-not-found',
-        component: () => import('./components/pages/PageNotFound.vue')
+        path: '/partners',
+        name: 'partners',
+        component: () => import('./components/Partners'),
+    },
+    {
+        path: '/FAQ',
+        name: 'FAQ',
+        component: () => import('./components/pages/FAQ'),
+    },
+    {
+        path: '/primaryAthorization',
+        name: 'primary-athorization',
+        component: () => import('./components/pages/someSteps/GetMoney'),
+    },
+    {
+        path: '/reAuthorization',
+        name: 're-authorization',
+        component: () => import('./components/pages/someSteps/ReAuthorization'),
+    },
+    {
+        path: '/refinancing',
+        name: 'refinancing',
+        component: () => import('./components/Refinancing'),
+    },
+    {
+        path: '/financeHome ',
+        name: 'welcome-home',
+        component: () => import('./components/pages/someSteps/Home'),
+    },
+    {
+        path: '/stepOneForm',
+        name: 'insert-data1',
+        component: () => import('./components/pages/someSteps/InsertData1'),
+    },
+    {
+        path: '/stepTwoForm',
+        name: 'insert-data2',
+        component: () => import('./components/pages/someSteps/InsertData2'),
+    },
+    {
+        path: '/smsCode',
+        name: 'sms-code',
+        component: () => import('./components/pages/someSteps/SMSCode'),
     },
     {
         path: '*',
         name: 'route-not-found',
-        beforeEnter() {
-            window.location = '/page-not-found';
-        }
+        component: () => import('./components/pages/PageNotFound.vue')
     }
 ];
 

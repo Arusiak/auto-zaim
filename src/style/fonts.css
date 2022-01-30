@@ -1,0 +1,23 @@
+.font-lato{
+    font-family: Lato;
+}
+
+body, h1{
+    font-family: Lato !important;
+    color: #1A1A1D !important;
+}
+
+body a, h1, span{
+    font-family: Lato;
+}
+.v-application p {
+  margin-bottom: unset !important;
+}
+
+.font-12{
+    font-size: 12px !important;
+}
+
+.font-17{
+    font-size: 17px !important;
+}

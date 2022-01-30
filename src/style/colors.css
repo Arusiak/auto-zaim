@@ -1,0 +1,81 @@
+.color-4F4F4F{
+    color: #4F4F4F !important;
+}
+
+span{
+    color: #4F4F4F;
+}
+
+.text-green, .green-select fieldset{
+    color: #4BAF32 !important;
+
+    height: 40px!important;
+}
+
+.green-select fieldset {
+    border: 2px solid;
+}
+
+.green-select .v-input__append-inner {
+    color: #4BAF32 !important;
+}
+
+.green-select>.v-input__control>.v-input__slot>.v-select__slot>label {
+    color: #4BAF32;
+}
+
+.green-select.v-text-field:not(.v-text-field--single-line) input {
+    margin-top: -19px !important;
+}
+.green-btn{
+    background: #4BAF32 !important;
+    padding: 15px 40px !important;
+    font-family: Lato;
+    font-weight: 900;
+    font-size: 16px !important;
+    line-height: 19px;
+    text-align: center;
+
+    color: #FFFFFF !important;
+}
+
+.green-btn:hover{
+    background: #348B1E !important;
+}
+
+.green-btn:focus{
+    background: #477C39 !important;
+}
+
+.site-link, .link-green, .border-green .v-icon, .border-green > .v-input__control > .v-input__slot > .v-input--selection-controls__input> .primary--text{
+    color: #4BAF32 !important;
+}
+
+.link-green:hover{
+    color: #348B1E !important;
+}
+
+.link-green:focus{
+    color: #477C39 !important;
+}
+
+.h4-green{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #4BAF32;
+}
+
+.h4-bold{
+    font-weight: bold;
+    color: #1A1D1A;
+}
+
+.outlined-btn-green{
+    border: 3px solid #4BAF32 !important;
+    color: #1A1A1D !important;
+    font-weight: 900;
+    font-size: 16px !important;
+}

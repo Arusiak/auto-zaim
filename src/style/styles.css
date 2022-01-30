@@ -1,0 +1,549 @@
+.opacity0-5{
+    opacity: 0.5;
+}
+
+.top-border-opacity{
+    border-top: 1px solid #4F4F4F;
+    opacity: 0.2;
+}
+
+.text-align-right{
+    text-align: right;
+}
+
+.font-15{
+    font-size: 15px !important;
+}
+
+.v-btn{
+    text-transform: unset !important;
+}
+
+.backImg, .howWorkBG{
+    background: url("../assets/bg.png");
+    background-position: bottom;
+}
+
+.howWorkBG{
+    position: relative;
+}
+
+.howWorkCar{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+.page-title{
+    font-size: 35px;
+    line-height: 42px;
+}
+
+.page-description{
+    font-size: 16px;
+    line-height: 150%;
+    color: #4BAF32;
+}
+
+.save-block{
+    background: #F9F9F9;
+    border-radius: 4px;
+    padding: 55px 43px;
+    position: relative;
+}
+
+.site-h3{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1A1D1A;
+}
+
+.h2-site{
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.works-number{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 100%;
+
+    text-align: right;
+    color: #DDDDDD;
+}
+
+.summary{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 150%;
+
+    color: #1A1D1A;
+}
+
+.iphone-main-img{
+    position: absolute;
+    left: 59%;
+    bottom: 0;
+    width: 19%;
+}
+
+.slider-site{
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+.v-slider > .primary--text, .v-slider__track-container > .primary {
+    color: #4BAF32 !important;
+    border-color: #4BAF32 !important;
+    background-color: #4BAF32 !important;
+}
+
+.page-description-big{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #4BAF32;
+}
+
+.car-main-img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 61%;
+}
+.woman-img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 75%;
+}
+.header-bar-item{
+    font-family: Lato;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #1A1D1A !important;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.v-main{
+    padding: unset !important;
+}
+
+.italic-text-header{
+    font-family: Lato;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: right;
+    color: #1A1D1A;
+    opacity: 0.7;
+}
+
+.logo-name{
+    font-family: Russo One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.07em;
+    color: #1A1D1A;
+    text-decoration: none !important;
+}
+
+.showMenu{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+}
+
+.partners-main-img{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    width: 50%;
+}
+
+.v-toolbar__content .router-link-active{
+    color: black !important;
+    font-weight: 900;
+}
+
+.text-middle{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #4F4F4F;
+}
+
+.text-small-black{
+    font-family: Lato;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #1A1D1A !important
+}
+
+.dialogBG{
+    background: url("../assets/Rectangle 55.png");
+    background-repeat: no-repeat;
+    height: fit-content;
+}
+.v-dialog{
+    overflow: hidden;
+}
+.media-dialog{
+    padding-left: 20px !important;
+    padding-right: 60px !important;
+}
+.h2-bold{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 150%;
+    color: #1A1D1A;
+}
+
+.slick-prev-btn {
+    font-size: 50px;
+}
+
+.slick-dots {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.slick-dots > li > button {
+    text-decoration: underline;
+}
+
+.slick-dots > .slick-active {
+    color: #4BAF32;
+}
+
+.p-small{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #4F4F4F;
+}
+
+.text-small-gray{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #1A1D1A;
+    opacity: 0.5;
+}
+
+.p-small-green{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: #4BAF32;
+}
+
+.span-small-black{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #1A1D1A;
+}
+
+.h5-bold{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 150%;
+    color: #1A1D1A;
+}
+
+.v-stepper__step__step{
+    display: none !important;
+}
+
+.stepper-site{
+    box-shadow: none !important;
+}
+.stepper-site .v-stepper__content{
+    border-left-color: #4BAF32 !important;
+}
+
+.chat{
+    position: fixed;
+    bottom: 0;
+    right: 134px;
+    z-index: 10000;
+}
+
+.chat-header{
+    width: 278px;
+    height: 40px;
+    background: #4F4F4F;
+    border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
+}
+
+.circle-green{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #4BAF32;
+}
+
+.circle-img{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.text-white-small{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+
+.sender-msg{
+    padding: 10px;
+    background: #F9F9F9;
+    width: 204px;
+    border-radius: 7px;
+}
+
+.text-black-xs{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 150%;
+    color: #4F4F4F !important;
+}
+
+.chat-input-text input::placeholder {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 150%;
+    color: black !important;
+}
+.chat-text-body{
+    height: 259px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.chat-input-text > .v-input__control > .v-input__slot:before{
+border: none !important;
+}
+.my-msg{
+    border: 1px solid #4BAF32;
+    border-radius: 7px;
+    padding: 10px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #4BAF32;
+    width: fit-content;
+}
+
+.chat-footer{
+    border: 1px solid #4F4F4F;
+    opacity: 0.1;
+}
+.chat-screen-mobile{
+    display: none;
+}
+.number-slider{
+    display: block !important;
+    margin-top: -30px;
+}
+.number-slider .v-input__append-outer{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 150%;
+    color: #1A1D1A;
+}
+.custom-input > .v-input__control > .v-input__slot > .v-text-field__slot > .primary--text{
+    color: black !important;
+}
+.v-application .custom-input{
+    color: black !important;
+    caret-color: black !important;
+    border: none !important;
+}
+.custom-input.v-input--is-focused fieldset, .v-text-field--outlined.v-input--has-state fieldset{
+    border: 1px solid #4F4F4F !important;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.green-select > .v-input__control > .v-input__slot .v-select__slot > label {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    margin-top: -10px;
+}
+.green-select > .v-input__control > .v-input__slot .v-select__slot > .v-input__append-inner {
+    margin-top: unset;
+
+}
+.green-select > .v-input__control > .v-input__slot .v-select__slot > .v-input__append-inner .v-icon {
+    color: green !important;
+}
+.green-select > .v-input__control > .v-input__slot .v-select__slot > .v-label--active {
+    color: black !important;
+    caret-color: black !important;
+}
+@media screen and (max-width: 1223px) {
+    .platoj{
+        display: none;
+    }
+    .md-custom1{
+        flex: 0 0 33.3333333333%;
+        max-width: 33.3333333333%;
+    }
+    .md-custom2{
+        flex: 0 0 41.6666666667%;
+        max-width: 41.6666666667%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .slick-slider {
+        display: block !important;
+    }
+    .slick-dots {
+        justify-content: end;
+    }
+    .slick-dots > li{
+        padding-left: 3px;
+    }
+}
+@media screen and (max-width: 848px) {
+    .woman-img {
+        height: 55%;
+    }
+}
+@media screen and (max-width: 841px) {
+    .italic-text-header {
+        display: none;
+    }
+}
+@media screen and (max-width: 750px) {
+    .chat {
+        width: 100%;
+        right: unset;
+    }
+    .chat-full-body{
+        height: 100vh;
+
+    }
+    .closed-icon{
+        display: block;
+        z-index: 10;
+    }
+    .chat-header{
+        width: 100%;
+    }
+    .chat-body{
+        height: 100vh;
+        position: relative;
+    }
+    .chat-text-body{
+        position: absolute;
+        width: 100%;
+        bottom: 188px;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+    .chat-text-body > .row{
+        margin-bottom: -80px
+    }
+    .chat-footer{
+        position: absolute;
+        width: 100%;
+        bottom: 82px;
+    }
+    .chat-screen{
+        display: none;
+    }
+    .chat-screen-mobile{
+        display: block;
+        position: absolute;
+        bottom: 24px;
+        left: 30px;
+        background: #4BAF32;
+        padding: 20px 17px 10px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width: 685px) {
+    .italic-text-header {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    .text-left-col {
+        text-align: left !important;
+    }
+    .v-dialog{
+        max-width: 100% !important;
+    }
+    .media-dialog{
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+@media screen and (max-width: 555px) {
+    .woman-img {
+        height: 35%;
+    }
+
+    .page-title {
+        font-size: 28px;
+        line-height: 34px;
+    }
+}
