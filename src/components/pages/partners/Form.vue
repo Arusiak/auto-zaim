@@ -66,7 +66,7 @@
             </v-col>
             <v-col md="4" class="hidden-sm-and-down">
                 <div class="save-block">
-                    <h4 class="h4-green">Мы дадим ответ в кратчайшие сроки</h4>
+                    <h4 class="h4-green" style="font-weight: 700">Мы дадим ответ в кратчайшие сроки</h4>
                 </div>
             </v-col>
         </v-row>
@@ -108,7 +108,7 @@
                 <div class="save-block">
                     <v-row>
                         <v-col cols="12">
-                            <h4 class="h4-green">Мы дадим ответ в кратчайшие сроки</h4>
+                            <h4 class="h4-green" style="font-weight: 700">Мы дадим ответ в кратчайшие сроки</h4>
                         </v-col>
                     </v-row>
                 </div>

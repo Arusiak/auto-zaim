@@ -1,61 +1,61 @@
 <template>
     <v-container class="header2">
         <v-app-bar color="white" app class="pt-2 pb-15">
-        <v-row style=" width: 100%;" class="align-center" v-if="this.$route.name === 'app-home'">
-            <v-col cols="1" class="d-flex">
-                <router-link
-                        :to="{name: 'app-home'}"
-                        class="d-flex align-center"
-                        style="text-decoration: none">
-                    <img :src="appLogo"/>
-                </router-link>
-            </v-col>
-            <v-col cols="6" class="d-flex">
-                <span v-for="item in secondaryMenu" :key="item.icon">
-                    <router-link :to="{ name: item.route }" class="header-bar-item">
-                        <span @click="scrollTo(item.ref)" >{{item.title}}</span>
+            <v-row style=" width: 100%;" class="align-center" v-if="this.$route.name === 'app-home'">
+                <v-col cols="1" class="d-flex">
+                    <router-link
+                            :to="{name: 'app-home'}"
+                            class="d-flex align-center"
+                            style="text-decoration: none">
+                        <img :src="appLogo"/>
                     </router-link>
-                </span>
-            </v-col>
-            <v-col cols="5" class="text-right">
-                <v-toolbar-items class="hidden-sm-and-down">
-                    <v-row class="justify-end align-center">
-                        <v-col cols="4" class="md-custom2">
-                            <b class="header-bar-item font-17">8 800-505-21-65</b><br/>
-                            <v-icon
-                                size="20"
-                                color="green">
-                                mdi-phone
-                            </v-icon>
-                            <a
-                                class="link-green"
-                                target="_blank"
-                                style="text-decoration: none"
-                                @click.stop="dialog = true">
-                                Заказать звонок
-                            </a>
-                        </v-col>
-                        <v-col cols="3" class="mt-14 platoj">
-                            <v-select
-                                item-text="title"
-                                :items="items"
-                                outlined
-                                label="Внести платёж"
-                                class="font-12 green-select mt-1"/>
-                        </v-col>
-                        <v-col cols="3" class="md-custom1">
-                            <router-link :to="{name: 'insert-data1'}" style="text-decoration: none">
-                                <v-btn
-                                    depressed
-                                    class="green-btn pa-3 font-12 mt-1">
-                                    Получить займ
-                                </v-btn>
-                            </router-link>
-                        </v-col>
-                    </v-row>
-                </v-toolbar-items>
-            </v-col>
-        </v-row>
+                </v-col>
+                <v-col cols="6" class="d-flex">
+                    <span v-for="item in secondaryMenu" :key="item.icon" class="header-two">
+                        <router-link :to="{ name: item.route }" class="header-bar-item">
+                            <span @click="scrollTo(item.ref)" >{{item.title}}</span>
+                        </router-link>
+                    </span>
+                </v-col>
+                <v-col cols="5" class="text-right">
+                    <v-toolbar-items class="hidden-sm-and-down">
+                        <v-row class="justify-end align-center">
+                            <v-col cols="4" class="md-custom2">
+                                <b class="header-bar-item font-17" style="letter-spacing: 0.05em;">8 800-505-21-65</b><br/>
+                                <v-icon
+                                    size="20"
+                                    color="green">
+                                    mdi-phone
+                                </v-icon>
+                                <a
+                                    class="link-green"
+                                    target="_blank"
+                                    style="text-decoration: none"
+                                    @click.stop="dialog = true">
+                                    Заказать звонок
+                                </a>
+                            </v-col>
+                            <v-col cols="3" class="mt-14 platoj">
+                                <v-select
+                                    item-text="title"
+                                    :items="items"
+                                    outlined
+                                    label="Внести платёж"
+                                    class="font-12 green-select mt-1"/>
+                            </v-col>
+                            <v-col cols="3" class="md-custom1">
+                                <router-link :to="{name: 'insert-data1'}" style="text-decoration: none">
+                                    <v-btn
+                                        depressed
+                                        class="green-btn pa-3 font-12 mt-1">
+                                        Получить займ
+                                    </v-btn>
+                                </router-link>
+                            </v-col>
+                        </v-row>
+                    </v-toolbar-items>
+                </v-col>
+            </v-row>
         </v-app-bar>
         <v-dialog
                 style="overflow: hidden !important;"

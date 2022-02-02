@@ -1,14 +1,14 @@
-.font-lato{
-    font-family: Lato;
+.font-lato, .v-label{
+    font-family: 'Lato', sans-serif;
 }
 
 body, h1{
-    font-family: Lato !important;
+    font-family: 'Lato', sans-serif !important;
     color: #1A1A1D !important;
 }
 
-body a, h1, span{
-    font-family: Lato;
+body a, h1, span, p{
+    font-family: 'Lato', sans-serif;
 }
 .v-application p {
   margin-bottom: unset !important;
@@ -20,4 +20,9 @@ body a, h1, span{
 
 .font-17{
     font-size: 17px !important;
+}
+.link-green{
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: underline;
 }

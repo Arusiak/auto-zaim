@@ -53,10 +53,10 @@
             <v-col id="calculation" ref="calculation" md="8" sm="12">
                 <div class="save-block">
                     <v-row>
-                        <v-col cols="12"><h4 class="h2-site text-green">Аренда с выкупом </h4></v-col>
+                        <v-col cols="12"><h4 class="h2-site text-green">Калькулятор займа</h4></v-col>
                         <v-col md="6">
                             <span>Какая сумма вам нужна</span>
-                            <h4 class="h4-green" style="color: #1A1D1A">3 000 000 ₽</h4>
+                            <h4 class="h4-green" style="color: #1A1D1A; font-family: unset !important;">3 000 000 ₽</h4>
                             <v-card class="slider-site">
                                 <v-card-text>
                                     <v-row>
@@ -85,7 +85,7 @@
                                 </v-card-text>
                             </v-card>
                             <span>На какой срок</span>
-                            <h4 class="h4-green" style="color: #1A1D1A">7 недель</h4>
+                            <h4 class="h4-green" style="color: #1A1D1A; font-family: unset !important;">7 недель</h4>
                             <v-card class="slider-site">
                                 <v-card-text>
                                     <v-row>
@@ -113,7 +113,7 @@
                                 </v-card-text>
                             </v-card>
                             <span>Ежемесячный платёж</span>
-                            <h4 class="h4-green" style="color: #1A1D1A">3 000 ₽</h4>
+                            <h4 class="h4-green" style="color: #1A1D1A; font-family: unset !important;">3 000 ₽</h4>
                             <v-card class="slider-site">
                                 <v-card-text>
                                     <v-row>
@@ -143,9 +143,9 @@
                         </v-col>
                         <v-col md="6">
                             <span class="mt-4">Сумма процентов по ставке 2,5%</span><br/>
-                            <b class="summary">300 000 ₽</b><br>
+                            <b class="summary" style="font-family: unset !important;">300 000 ₽</b><br>
                             <span class="mt-4">Сумма к выплате</span><br/>
-                            <b class="summary">3 000 000 ₽</b><br/>
+                            <b class="summary" style="font-family: unset !important;">3 000 000 ₽</b><br/>
                             <v-btn
                                 depressed
                                 class="green-btn mt-4">

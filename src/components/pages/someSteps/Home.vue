@@ -10,9 +10,9 @@
                 <v-col cols="6" sm="4" md="5">
                     <p class="p-small">Напоминаем вам о предстоящем платеже <br/> по договору «9525215» 12.12.2021</p>
                     <p class="p-small-green mt-5">Осталось выплатить</p>
-                    <h5 class="h5-bold">3 000 000 ₽</h5>
+                    <h5 class="h5-bold" style="font-family: unset">3 000 000 ₽</h5>
                     <p class="p-small-green mt-3">Предстоящий платёж</p>
-                    <span class="h5-bold">50 000 ₽ </span>
+                    <span class="h5-bold" style="font-family: unset">50 000 ₽ </span>
                     <span class="text-small-gray">(1/42)</span>
                 </v-col>
             </v-row>

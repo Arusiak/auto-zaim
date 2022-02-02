@@ -56,7 +56,7 @@
             </v-col>
             <v-col md="4" class="hidden-sm-and-down">
                 <div class="save-block">
-                    <h4 class="h4-green">Сохраните нас
+                    <h4 class="bold-l-text-green">Сохраните нас
                         в избранном</h4>
                     <span class="mt-1">Деньги и платежи под рукой</span>
                     <v-btn

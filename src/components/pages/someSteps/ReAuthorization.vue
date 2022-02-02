@@ -2,7 +2,7 @@
     <v-container>
         <v-row class="text-center mt-15">
             <v-col cols="12">
-                <h2 class="page-title"><b>Займы до 3 000 000 ₽</b></h2>
+                <h2 class="page-title" style="font-family: unset"><b>Займы до 3 000 000 ₽</b></h2>
             </v-col>
         </v-row>
         <v-row class="justify-center mt-5 text-center">

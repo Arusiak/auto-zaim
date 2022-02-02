@@ -52,7 +52,9 @@ export default {
 
 </script>
 <style>
+  @import url('http://fonts.googleapis.com/css?family=Lato:400,700');
  @import "style/colors.css";
  @import "style/fonts.css";
  @import "style/styles.css";
+
 </style>
