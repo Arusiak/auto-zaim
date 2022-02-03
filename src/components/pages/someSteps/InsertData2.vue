@@ -38,7 +38,7 @@
                     </v-col>
                 </v-row>
                 <v-row class="justify-center" style="margin-top: -25px">
-                    <v-col md="12" cols="12">
+                    <v-col md="12" sm="6" cols="10">
                         <v-checkbox class="border-green" v-model="checked">
                             <template v-slot:label>
                                 <div>

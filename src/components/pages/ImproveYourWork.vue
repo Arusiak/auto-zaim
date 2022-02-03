@@ -79,7 +79,7 @@
                     Отправить
                 </v-btn>
             </v-col>
-            <v-col md="9" sm="12" cols="12">
+            <v-col md="9" sm="12" cols="12" class="ml-3">
                 <v-checkbox class="border-green">
                     <template v-slot:label>
                         <div>

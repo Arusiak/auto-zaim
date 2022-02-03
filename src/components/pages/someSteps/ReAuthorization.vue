@@ -24,14 +24,23 @@
                     <v-btn
                         v-if="alreadyPaid"
                         depressed
-                        class="green-btn pa-6">
+                        class="green-btn pa-6"
+                        style="padding: 24px 63px !important;">
                         Оформить
                     </v-btn>
                 </router-link>
             </v-col>
             <v-col cols="12" class="mt-3">
-                <router-link :to="{name: 'app-home'}" style="text-decoration: none">
+                <router-link :to="{name: 'app-home'}" style="text-decoration: none; ">
                     <v-btn
+                        v-if="!alreadyPaid"
+                        class="outlined-btn-green pa-6"
+                        style="padding: 24px 53px !important;"
+                        outlined>
+                        Личный кабинет
+                    </v-btn>
+                    <v-btn
+                        v-else
                         class="outlined-btn-green pa-6"
                         outlined>
                         Личный кабинет

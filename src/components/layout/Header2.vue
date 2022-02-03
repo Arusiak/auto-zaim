@@ -21,7 +21,7 @@
                     <v-toolbar-items class="hidden-sm-and-down">
                         <v-row class="justify-end align-center">
                             <v-col cols="4" class="md-custom2">
-                                <b class="header-bar-item font-17" style="letter-spacing: 0.05em;">8 800-505-21-65</b><br/>
+                                <b class="header-bar-item font-17" style="letter-spacing: 0.05em; margin: unset">8 800-505-21-65</b><br/>
                                 <v-icon
                                     size="20"
                                     color="green">

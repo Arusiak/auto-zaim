@@ -12,7 +12,7 @@
                                         class="d-flex align-center"
                                         style="text-decoration: none">
                                         <img :src="appLogo" class="site-logo"/>
-                                        <span class="logo-name">AUTO<b class="text-green">zaim</b>.ru</span>
+                                        <span class="logo-name hidden-sm-and-down">AUTO<b class="text-green">zaim</b>.ru</span>
                                     </router-link>
                                 </v-toolbar-title>
                             </v-col>
@@ -39,16 +39,12 @@
                                 </span>
                             </span>
                             </v-col>
-                            <v-col cols="5">
+                            <v-col cols="5" class="d-flex justify-end">
                             <v-toolbar-items class="hidden-sm-and-down">
                                 <v-row class="align-center justify-end">
                                     <v-col cols="4" class="text-right">
-                                        <b class="header-bar-item font-17" style="">8 800-505-21-65</b><br/>
-                                        <v-icon
-                                            size="20"
-                                            color="green">
-                                            mdi-phone
-                                        </v-icon>
+                                        <b class="header-bar-item font-17"  style="letter-spacing: 0.05em; margin: unset">8 800-505-21-65</b><br/>
+                                        <img :src="phoneIconSm"/>
                                         <a
                                             class="link-green"
                                             target="_blank"
@@ -78,24 +74,9 @@
                             </v-toolbar-items>
                             <span class="d-xl-none d-md-none d-lg-none d-sm-block">
                             <v-app-bar-nav-icon>
-                                <v-icon
-                                    size="20"
-                                    color="green"
-                                    @click.stop="dialog = true">
-                                    mdi-phone
-                                </v-icon>
-                                <v-icon
-                                    v-if="showMenu"
-                                    @click="toggleDrawer"
-                                    color="black">
-                                    mdi-menu
-                                </v-icon>
-                                <v-icon
-                                    v-if="!showMenu"
-                                    @click="toggleDrawer"
-                                    color="black">
-                                    mdi-close
-                                </v-icon>
+                                <img :src="phoneIconMd" @click.stop="dialog = true"/>
+                                <img class="ml-2" :src="hamburgerIcon" v-if="showMenu" @click="toggleDrawer"/>
+                                <img class="ml-2" :src="closeIcon" v-if="!showMenu" @click="toggleDrawer"/>
                             </v-app-bar-nav-icon>
                             <v-list v-if="!showMenu" class="showMenu">
                                 <hr>
@@ -159,14 +140,14 @@
                 </v-col>
             </v-row>
             <v-row style="margin-top: 64px; width: 100%; overflow-x: auto" v-if="this.$route.name === 'app-home'">
-                <v-col cols="7" class="d-flex">
+                <v-col cols="8" class="d-flex">
                     <span v-for="item in secondaryMenu" :key="item.icon">
                         <router-link :to="{ name: item.route }" class="header-bar-item">
                             <span @click="scrollTo(item.ref)" >{{item.title}}</span>
                         </router-link>
                     </span>
                 </v-col>
-                <v-col cols="5" class="text-right">
+                <v-col cols="4" class="text-right">
                     <span class="italic-text-header">Работаем круглосуточно, по всем городам России</span>
                 </v-col>
             </v-row>
@@ -198,6 +179,10 @@
 <script>
     import appLogo from '../../assets/logo.png';
     import CallBack from "../pages/callBack/CallBack";
+    import phoneIconSm from '../../assets/phone-sm-icon.png';
+    import phoneIconMd from '../../assets/phone-md-icon.png';
+    import hamburgerIcon from '../../assets/гамбургер.png';
+    import closeIcon from '../../assets/closeIcon.png';
     export default {
         name: 'Header',
         components: {
@@ -208,6 +193,10 @@
                 appLogo,
                 showMenu: true,
                 dialog: false,
+                hamburgerIcon,
+                closeIcon,
+                phoneIconSm,
+                phoneIconMd,
                 secondaryMenu: [
                     { route: 'app-home', icon: "home", title: "Условия", ref: "terms" },
                     { icon: "info", title: "Калькулятор", ref: "calculation" },
