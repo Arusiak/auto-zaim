@@ -12,47 +12,55 @@
                 </v-btn>
             </v-col>
         </v-row>
-        <v-text-field
-            outlined
-            label="Ваше ФИО"
-            class="custom-input"
-            v-model="fio"
-            :rules="fioRules">
-        </v-text-field>
-        <v-text-field
-            outlined
-            label="Телефон"
-            class="custom-input"
-            v-model="phone"
-            :rules="phoneRules">
-        </v-text-field>
-        <v-btn
-            @click.stop="dialog = true"
-            depressed
-            class="green-btn">
-            Отправить запрос
-        </v-btn>
-        <v-checkbox class="border-green">
-            <template v-slot:label>
-                <div>
-                    Я даю своё
-                    <v-tooltip bottom>
-                        <template v-slot:activator="{ on }">
-                            <a
-                                class="link-green"
-                                target="_blank"
-                                href="https://vuetifyjs.com"
-                                @click.stop
-                                v-on="on">
-                                согласие
-                            </a>
-                        </template>
-                        Opens in new window
-                    </v-tooltip>
-                    на обработку своих персональных данных в соответствии с Федеральным законом «О персональных данных» от 27.07.2006 N 152-ФЗ
-                </div>
-            </template>
-        </v-checkbox>
+        <v-form
+            ref="form"
+            v-model="valid"
+            lazy-validation>
+            <v-text-field
+                outlined
+                label="Ваше ФИО"
+                class="custom-input"
+                v-model="fio"
+                :rules="fioRules">
+            </v-text-field>
+            <v-text-field
+                outlined
+                label="Телефон"
+                class="custom-input"
+                v-model="phone"
+                :rules="phoneRules">
+            </v-text-field>
+            <v-btn
+                @click="validate"
+                depressed
+                class="green-btn">
+                Отправить запрос
+            </v-btn>
+            <v-checkbox
+                class="border-green"
+                v-model="checkbox"
+                :rules="[v => !!v || 'приветствую продолжение!']">
+                <template v-slot:label>
+                    <div>
+                        Я даю своё
+                        <v-tooltip bottom>
+                            <template v-slot:activator="{ on }">
+                                <a
+                                    class="link-green"
+                                    target="_blank"
+                                    href="https://vuetifyjs.com"
+                                    @click.stop
+                                    v-on="on">
+                                    согласие
+                                </a>
+                            </template>
+                            Opens in new window
+                        </v-tooltip>
+                        на обработку своих персональных данных в соответствии с Федеральным законом «О персональных данных» от 27.07.2006 N 152-ФЗ
+                    </div>
+                </template>
+            </v-checkbox>
+        </v-form>
         <v-dialog
                 style="overflow: hidden !important;"
                 class="dialog-site"
@@ -87,26 +95,35 @@
         },
         props: {
             onClose: Function,
-
         },
         data() {
             return {
                 dialog: false,
+                valid: true,
+                checkbox: false,
                 appLogo,
                 fio: '',
                 fioRules: [
-                    v => !!v || 'ФИО is required',
+                    v => !!v || 'ФИО заполните',
                 ],
                 phone: '',
                 phoneRules: [
-                    v => !!v || 'Телефон is required',
+                    v => !!v || 'Телефон заполните',
+                    v => Number.isInteger(Number(v)) || "Значение должно быть числом",
                 ],
             }
         },
         methods: {
             handleCloseModal() {
                 this.dialog = false
-            }
+            },
+            validate () {
+                if ( this.$refs.form.validate() === false ){
+                    this.$refs.form.validate()
+                }else {
+                    this.dialog = true
+                }
+            },
         },
     }
 </script>

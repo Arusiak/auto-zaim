@@ -34,5 +34,14 @@
             onClose: Function,
 
         },
+        methods: {
+            validate () {
+                if ( this.$refs.form.validate() ===false  ){
+                    this.$refs.form.validate()
+                }else {
+                    this.$router.push('/reAuthorization');
+                }
+            },
+        },
     }
 </script>

@@ -26,50 +26,55 @@
                         </v-row>
                     </v-col>
                 </v-row>
-                <v-row class="justify-center">
-                    <v-col md="12" cols="12" class="">
-                        <v-text-field
-                            v-model="address"
-                            :rules="addressRules"
-                            outlined
-                            label="Адрес регистрации"
-                            class="custom-input">
-                        </v-text-field>
-                    </v-col>
-                </v-row>
-                <v-row class="justify-center" style="margin-top: -25px">
-                    <v-col md="12" sm="6" cols="10">
-                        <v-checkbox class="border-green" v-model="checked">
-                            <template v-slot:label>
-                                <div>
-                                    Адрес регистрации совпадает с местом жительства
-                                </div>
-                            </template>
-                        </v-checkbox>
-                    </v-col>
-                </v-row>
-                <v-row class="justify-center">
-                    <v-col md="12" cols="12" v-if="checked">
-                        <v-text-field
-                            v-model="address2"
-                            :rules="address2Rules"
-                            outlined
-                            label="Адрес жительства"
-                            class="custom-input">
-                        </v-text-field>
-                    </v-col>
-                </v-row>
-                <v-row class="mb-15">
-                    <v-col cols="12" class="mt-5">
-                        <router-link :to="{name: 're-authorization'}" style="text-decoration: none">
+                <v-form
+                    ref="form"
+                    v-model="valid"
+                    lazy-validation>
+                    <v-row class="justify-center">
+                        <v-col md="12" cols="12" class="">
+                            <v-text-field
+                                v-model="address"
+                                :rules="addressRules"
+                                outlined
+                                label="Адрес регистрации"
+                                class="custom-input">
+                            </v-text-field>
+                        </v-col>
+                    </v-row>
+                    <v-row class="justify-center" style="margin-top: -25px">
+                        <v-col md="12" sm="6" cols="10">
+                            <v-checkbox class="border-green" v-model="checked">
+                                <template v-slot:label>
+                                    <div>
+                                        Адрес регистрации совпадает с местом жительства
+                                    </div>
+                                </template>
+                            </v-checkbox>
+                        </v-col>
+                    </v-row>
+                    <v-row class="justify-center">
+                        <v-col md="12" cols="12" v-if="checked">
+                            <v-text-field
+                                v-model="address2"
+                                :rules="address2Rules"
+                                outlined
+                                label="Адрес жительства"
+                                class="custom-input">
+                            </v-text-field>
+                        </v-col>
+                    </v-row>
+                    <v-row class="mb-15">
+                        <v-col cols="12" class="mt-5">
                             <v-btn
+                                :disabled="!valid"
                                 depressed
-                                class="green-btn pa-6">
+                                class="green-btn pa-6"
+                                @click="validate">
                                 Продолжить
                             </v-btn>
-                        </router-link>
-                    </v-col>
-                </v-row>
+                        </v-col>
+                    </v-row>
+                </v-form>
             </v-col>
         </v-row>
 
@@ -82,14 +87,14 @@
         data() {
             return {
                 checked: false,
+                valid: true,
                 address: '',
                 addressRules: [
-                    v => !!v || 'Address is required',
-                    v => /.+@.+\..+/.test(v) || 'Address must be valid',
+                    v => !!v || 'Address заполните',
                 ],
                 address2: '',
                 address2Rules: [
-                    v => !!v || 'Адрес жительства is required',
+                    v => !!v || 'Адрес жительства заполните',
                 ],
             }
         },
@@ -97,6 +102,13 @@
         methods: {
             toggleDrawer() {
                 this.showMenu = !this.showMenu;
+            },
+            validate () {
+                if ( this.$refs.form.validate() ===false  ){
+                    this.$refs.form.validate()
+                }else {
+                    this.$router.push('/reAuthorization');
+                }
             },
         },
     }

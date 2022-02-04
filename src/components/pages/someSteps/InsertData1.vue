@@ -26,6 +26,10 @@
                                 </v-row>
                             </v-col>
                         </v-row>
+                        <v-form
+                            ref="form"
+                            v-model="valid"
+                            lazy-validation>
                         <v-row>
                             <v-col cols="12">
                                 <v-text-field
@@ -97,7 +101,9 @@
                                 <v-text-field
                                     outlined
                                     label="Номер авто"
-                                    class="custom-input">
+                                    class="custom-input"
+                                    v-model="autoNumber"
+                                    :rules="autoNumberRules">
                                 </v-text-field>
                             </v-col>
                         </v-row>
@@ -114,15 +120,16 @@
                         </v-row>
                         <v-row class="" style="margin-top: -15px">
                             <v-col cols="12" class="">
-                                <router-link :to="{name: 'insert-data2'}" style="text-decoration: none">
-                                    <v-btn
-                                        depressed
-                                        class="green-btn pa-6">
-                                        Продолжить
-                                    </v-btn>
-                                </router-link>
+                                <v-btn
+                                    :disabled="!valid"
+                                    depressed
+                                    class="green-btn pa-6"
+                                    @click="validate">
+                                    Продолжить
+                                </v-btn>
                             </v-col>
                         </v-row>
+                        </v-form>
                     </v-stepper-content>
 
                     <v-stepper-step
@@ -168,36 +175,57 @@
         data() {
             return {
                 e6: 1,
+                valid: true,
                 email: '',
                 emailRules: [
-                    v => !!v || 'E-mail is required',
-                    v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+                    v => !!v || 'E-mail заполните',
+                    v => /.+@.+\..+/.test(v) || 'Должен быть действителен e-mail',
                 ],
                 doxod: '',
                 doxodRules: [
-                    v => !!v || 'Месячный доход is required',
+                    v => !!v || 'Месячный доход заполните',
+                    v => Number.isInteger(Number(v)) || "Значение должно быть числом",
                 ],
                 phone: '',
                 phoneRules: [
-                    v => !!v || 'Телефон is required',
+                    v => !!v || 'Телефон заполните',
+                    v => Number.isInteger(Number(v)) || "Значение должно быть числом",
                 ],
                 platoj: '',
                 platojRules: [
-                    v => !!v || 'Комфортный платёж is required',
+                    v => !!v || 'Комфортный платёж заполните',
+                    v => Number.isInteger(Number(v)) || "Значение должно быть числом",
                 ],
                 zaimLimit: '',
                 zaimLimitRules: [
-                    v => !!v || 'Срок займа is required',
+                    v => !!v || 'Срок займа заполните',
                 ],
                 zaimSummary: '',
                 zaimSummaryRules: [
-                    v => !!v || 'Сумма займа is required',
+                    v => !!v || 'Сумма займа заполните',
+                    v => Number.isInteger(Number(v)) || "Значение должно быть числом",
                 ],
                 credits: '',
                 creditsRules: [
-                    v => !!v || 'Платежи по текущим кредитам is required',
+                    v => !!v || 'Платежи по текущим кредитам заполните',
+                    v => Number.isInteger(Number(v)) || "Значение должно быть числом",
+                ],
+                autoNumber: '',
+                autoNumberRules: [
+                    v => !!v || 'Номер авто заполните',
+                    v =>
+                        /[а-яё]+/i.test(v) || "Используйте кириллицу"
                 ],
             }
+        },
+        methods: {
+            validate () {
+                if ( this.$refs.form.validate() ===false  ){
+                    this.$refs.form.validate()
+                }else {
+                    this.$router.push('/stepTwoForm');
+                }
+            },
         },
     }
 </script>

@@ -17,28 +17,33 @@
                <h2 class="h2-bold">Введите код из смс</h2>
             </v-col>
         </v-row>
-        <v-row class="justify-center">
-            <v-col md="6" cols="8" class="">
-                <v-text-field
-                    outlined
-                    label="Код из смс"
-                    class="custom-input"
-                    v-model="code"
-                    :rules="codeRules">
-                </v-text-field>
-            </v-col>
-        </v-row>
-        <v-row class="justify-center text-center mb-15">
-            <v-col cols="12" class="mt-5">
-                <router-link :to="{name: 'app-home'}" style="text-decoration: none">
+        <v-form
+            ref="form"
+            v-model="valid"
+            lazy-validation>
+            <v-row class="justify-center">
+                <v-col md="6" cols="8" class="">
+                    <v-text-field
+                        outlined
+                        label="Код из смс"
+                        class="custom-input"
+                        v-model="code"
+                        :rules="codeRules">
+                    </v-text-field>
+                </v-col>
+            </v-row>
+            <v-row class="justify-center text-center mb-15">
+                <v-col cols="12" class="mt-5">
                     <v-btn
+                        :disabled="!valid"
                         depressed
+                        @click="validate"
                         class="green-btn pa-6">
                         Продолжить
                     </v-btn>
-                </router-link>
-            </v-col>
-        </v-row>
+                </v-col>
+            </v-row>
+        </v-form>
     </v-container>
 </template>
 
@@ -47,11 +52,22 @@
         name: 'SMSCode',
         data() {
             return {
+                valid: true,
                 code: '',
                 codeRules: [
-                    v => !!v || 'Code is required',
+                    v => !!v || 'Code заполните',
+                    v => Number.isInteger(Number(v)) || "Значение должно быть числом",
                 ],
             }
-        }
+        },
+        methods: {
+            validate () {
+                if ( this.$refs.form.validate() === false ){
+                    this.$refs.form.validate()
+                }else {
+                    this.$router.push('/');
+                }
+            },
+        },
     }
 </script>
