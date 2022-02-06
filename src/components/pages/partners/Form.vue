@@ -32,7 +32,7 @@
                         </v-col>
                     </v-row>
                     <v-row class="mt-0">
-                        <v-col md="6" cols="12">
+                        <v-col md="6" sm="6" cols="12">
                             <v-text-field
                                 outlined
                                 v-model="phone"
@@ -41,7 +41,7 @@
                                 class="custom-input">
                             </v-text-field>
                         </v-col>
-                        <v-col md="6" cols="12">
+                        <v-col md="6" sm="6" cols="12">
                             <v-text-field
                                 outlined
                                 v-model="email"
@@ -65,7 +65,7 @@
                     </v-row>
                 </v-col>
                 <v-col md="4" class="hidden-sm-and-down">
-                    <div class="save-block">
+                    <div class="save-block height-100 d-flex align-center">
                         <h4 class="h4-green" style="font-weight: 700">Мы дадим ответ в кратчайшие сроки</h4>
                     </div>
                 </v-col>
@@ -79,7 +79,7 @@
                         Отправить
                     </v-btn>
                 </v-col>
-                <v-col md="9" sm="12" cols="12">
+                <v-col md="9" sm="11" cols="11" class="ml-2">
                     <v-checkbox class="border-green">
                         <template v-slot:label>
                             <div>

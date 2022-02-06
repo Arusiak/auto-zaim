@@ -5,7 +5,7 @@
                 <p class=""><b>до <span class="page-title">90%</span></b></p>
                 <span>от стоимости авто</span>
             </v-col>
-            <v-col md="4" sm="4" cols="12" class="text-center">
+            <v-col md="4" sm="4" cols="12" class="text-center-right-media">
                 <p class=""><b>от<span class="page-title">2,5%</span></b></p>
                 <span>ежемесячная ставка</span>
             </v-col>
@@ -72,7 +72,7 @@
                                                 <template v-slot:append>
                                                     <v-text-field
                                                         v-model="slider"
-                                                        class="mt-0 pt-0"
+                                                        class="mt-0 pt-0 slider-input"
                                                         hide-details
                                                         single-line
                                                         type="number"
@@ -101,7 +101,7 @@
                                                 <template v-slot:append>
                                                     <v-text-field
                                                         v-model="slider"
-                                                        class="mt-0 pt-0"
+                                                        class="mt-0 pt-0 slider-input"
                                                         hide-details
                                                         single-line
                                                         type="number"
@@ -129,7 +129,7 @@
                                                 <template v-slot:append>
                                                     <v-text-field
                                                         v-model="slider"
-                                                        class="mt-0 pt-0"
+                                                        class="mt-0 pt-0 slider-input"
                                                         hide-details
                                                         single-line
                                                         type="number"

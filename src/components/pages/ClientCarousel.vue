@@ -11,7 +11,7 @@
         </v-row>
         <v-row>
             <v-col cols="12">
-                <Slick style="display: flex" ref="slick" :options="slickOptions">
+                <Slick style="" ref="slick" :options="slickOptions">
                     <v-col cols="12">
                         <img :src="JolieImg"/>
                         <h4 class="site-h3">Ангелина Джоли</h4>

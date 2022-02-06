@@ -35,7 +35,7 @@
                                     Заказать звонок
                                 </a>
                             </v-col>
-                            <v-col cols="3" class="mt-14 platoj">
+                            <v-col cols="4" class="mt-14 platoj">
                                 <v-select
                                     item-text="title"
                                     :items="items"

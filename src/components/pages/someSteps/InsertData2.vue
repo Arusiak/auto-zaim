@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-row class="justify-center">
-            <v-col cols="6">
+            <v-col cols="8" md="6">
                 <v-row class="justify-center align-center mt-15">
                     <v-col cols="12">
                         <router-link :to="{name: 'insert-data1'}" style="text-decoration: none">
@@ -42,7 +42,7 @@
                         </v-col>
                     </v-row>
                     <v-row class="justify-center" style="margin-top: -25px">
-                        <v-col md="12" sm="6" cols="10">
+                        <v-col md="12" sm="12" cols="12">
                             <v-checkbox class="border-green" v-model="checked">
                                 <template v-slot:label>
                                     <div>

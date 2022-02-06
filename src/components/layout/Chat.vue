@@ -42,7 +42,7 @@
                         </v-col>
                         <v-col cols="9">
                             <div class="sender-msg text-black-xs">
-                                <p>Приветствую вас! С радостью отвечу на ваши вопросы
+                                <p style="word-break: break-word">Приветствую вас! С радостью отвечу на ваши вопросы
                                 P.S. Я действительно живой человек :)</p>
                             </div>
                         </v-col>
@@ -50,36 +50,34 @@
                     <v-row class="justify-end mt-0">
                         <v-col cols="auto mr-3">
                             <div class="my-msg">
-                                <p>Добрый день!</p>
+                                <p style="word-break: break-word">Добрый день!</p>
                             </div>
                         </v-col>
                     </v-row>
                     <v-row class="justify-end mt-0">
                         <v-col cols="auto mr-3">
                             <div class="my-msg">
-                                <p>У меня есть вопрос</p>
+                                <p style="word-break: break-word">У меня есть вопрос</p>
                             </div>
                         </v-col>
                     </v-row>
                     <v-row class="justify-end mt-0">
                         <v-col cols="auto mr-3">
                             <div class="my-msg">
-                                <p>Вы можете мне помочь?</p>
+                                <p style="word-break: break-word">Вы можете мне помочь?</p>
                             </div>
                         </v-col>
                     </v-row>
                 </div>
-                <div class="chat-footer mt-4">
+                <div class="footer-chat mt-4">
                     <v-row class="align-center px-3" style="height: 46px">
                         <v-col cols="10">
                             <v-text-field
-                                v-model="sms"
-                                :rules="smsRules"
                                 class="text-black-xs chat-input-text"
                                 placeholder="Введите сообщение"></v-text-field>
                         </v-col>
                         <v-col cols="1">
-                            <v-btn style="height: auto; min-width: auto; padding: unset;">
+                            <v-btn style="height: auto; min-width: auto; padding: unset; box-shadow: unset; background: transparent">
                                 <img :src="arrowImg"/>
                             </v-btn>
                         </v-col>
@@ -87,6 +85,7 @@
                     <v-row class="align-center">
                         <v-col cols="1" class="ml-2">
                             <v-file-input
+                                class="file-input"
                                 hide-input
                                 truncate-length="15"></v-file-input>
                         </v-col>
@@ -113,10 +112,6 @@
             arrowImg,
             otherImg,
             messageImg,
-            sms: '',
-            smsRules: [
-                v => !!v || 'сообщение is required',
-            ],
         }),
         methods: {
             toggleDrawer() {

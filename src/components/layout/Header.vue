@@ -5,18 +5,18 @@
                 <v-col cols="12">
                     <v-app-bar color="white" app class="pt-2 ">
                         <v-row style="align-items: center">
-                            <v-col cols="3" class="d-flex">
+                            <v-col md="3" sm="6" cols="6" class="d-flex">
                                 <v-toolbar-title>
                                     <router-link
                                         :to="{name: 'app-home'}"
                                         class="d-flex align-center"
                                         style="text-decoration: none">
                                         <img :src="appLogo" class="site-logo"/>
-                                        <span class="logo-name hidden-sm-and-down">AUTO<b class="text-green">zaim</b>.ru</span>
+                                        <span class="logo-name main-logo">AUTO<b class="text-green">zaim</b>.ru</span>
                                     </router-link>
                                 </v-toolbar-title>
                             </v-col>
-                            <v-col cols="4">
+                            <v-col md="4" sm="1" cols="1">
                                       <span v-if="this.$route.name === 'app-home' || this.$route.name === 'partners' || this.$route.name === 'current-clients' || this.$route.name === 'route-not-found' || this.$route.name === 'refinancing'">
                                 <span class="hidden-sm-and-down" v-for="item in mainMenu" :key="item.icon">
                                     <router-link :to="{ name: item.route }" class="header-bar-item">
@@ -43,17 +43,17 @@
                             <v-toolbar-items class="hidden-sm-and-down">
                                 <v-row class="align-center justify-end">
                                     <v-col cols="4" class="text-right">
-                                        <b class="header-bar-item font-17"  style="letter-spacing: 0.05em; margin: unset">8 800-505-21-65</b><br/>
+                                        <b class="header-bar-item font-17 font-14-text-md"  style="letter-spacing: 0.05em; margin: unset">8 800-505-21-65</b><br/>
                                         <img :src="phoneIconSm"/>
                                         <a
-                                            class="link-green"
+                                            class="link-green font-14-text-md"
                                             target="_blank"
                                             style="text-decoration: none"
                                             @click.stop="dialog = true">
                                             Заказать звонок
                                         </a>
                                     </v-col>
-                                    <v-col cols="3">
+                                    <v-col cols="4">
                                         <v-select
                                             item-text="title"
                                             :items="items"
@@ -61,7 +61,7 @@
                                             label="Внести платёж"
                                             class="font-12 green-select mt-14"/>
                                     </v-col>
-                                    <v-col cols="3">
+                                    <v-col cols="4">
                                         <router-link :to="{name: 'insert-data1'}" target= '_blank' style="text-decoration: none">
                                             <v-btn
                                                 depressed

@@ -13,7 +13,7 @@
             v-model="valid"
             lazy-validation>
             <v-row>
-                <v-col md="8" sm="12">
+                <v-col md="7" sm="12">
                     <v-row class="mt-0">
                         <v-col md="12">
                             <v-text-field
@@ -26,7 +26,7 @@
                         </v-col>
                     </v-row>
                     <v-row class="mt-0">
-                        <v-col md="6">
+                        <v-col md="6" sm="6" cols="12">
                             <v-text-field
                                 outlined
                                 label="Телефон"
@@ -35,7 +35,7 @@
                                 :rules="phoneRules">
                             </v-text-field>
                         </v-col>
-                        <v-col md="6">
+                        <v-col md="6" sm="6" cols="12">
                             <v-text-field
                                 outlined
                                 v-model="email"
@@ -58,14 +58,15 @@
                         </v-col>
                     </v-row>
                 </v-col>
-                <v-col md="4" class="hidden-sm-and-down">
-                    <div class="save-block">
+                <v-col md="5" class="hidden-sm-and-down">
+                    <div class="save-block height-100 d-flex flex-column justify-center">
                         <h4 class="bold-l-text-green">Сохраните нас
                             в избранном</h4>
                         <span class="mt-1">Деньги и платежи под рукой</span>
                         <v-btn
-                            class="outlined-btn-green mt-2"
-                            outlined>
+                            class="outlined-btn-green mt-2 font-14-text"
+                            outlined
+                            style="width: 100%">
                             <v-icon
                                 color="black">
                                 mdi-star
@@ -84,7 +85,7 @@
                         Отправить
                     </v-btn>
                 </v-col>
-                <v-col md="9" sm="12" cols="12" class="ml-3">
+                <v-col md="9" sm="11" cols="11" class="ml-3">
                     <v-checkbox
                         class="border-green"
                         v-model="checkbox"
@@ -123,7 +124,8 @@
                         </v-col>
                         <v-col sm="6" cols="12">
                             <v-btn
-                                class="outlined-btn-green"
+                                style="width: 100%"
+                                class="outlined-btn-green font-14-text-media"
                                 outlined>
                                 <v-icon
                                     color="black">

@@ -14,9 +14,9 @@
         </v-row>
         <span class="mt-5">Наш специалист скоро свяжется <br/> с Вами! </span><br/>
         <v-btn
-                depressed
-                class="green-btn"
-                @click="$emit('onClose')">
+            depressed
+            class="green-btn mt-5"
+            @click="$emit('onClose')">
             Закрыть
         </v-btn>
     </v-col>
