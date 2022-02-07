@@ -59,16 +59,28 @@
 </template>
 
 <script>
+    import {mapGetters} from 'vuex';
+
     export default {
         name: 'GetMoney',
         data() {
             return {
                 checkbox: false,
-                phone: '',
                 phoneRules: [
                     v => !!v || 'Телефон заполните',
                     v => Number.isInteger(Number(v)) || "Значение должно быть числом",
                 ],
+            }
+        },
+        computed: {
+            ...mapGetters(['getPhone']),
+            phone:{
+                get: function(){
+                    return this.getPhone;
+                },
+                set: function(phone){
+                    this.$store.dispatch('setPhone', phone);
+                }
             }
         },
         methods: {

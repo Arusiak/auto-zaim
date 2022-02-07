@@ -2,7 +2,7 @@
     <v-container>
         <v-row class="justify-center align-center mt-15">
             <v-col cols="6">
-                <router-link :to="{name: 'primaryAthorization'}" target= '_blank' style="text-decoration: none">
+                <router-link :to="{name: 'primary-athorization'}" style="text-decoration: none">
                     <v-icon
                         size="20"
                         color="green">
@@ -48,16 +48,28 @@
 </template>
 
 <script>
+    import {mapGetters} from "vuex";
+
     export default {
         name: 'SMSCode',
         data() {
             return {
                 valid: true,
-                code: '',
                 codeRules: [
                     v => !!v || 'Code заполните',
                     v => Number.isInteger(Number(v)) || "Значение должно быть числом",
                 ],
+            }
+        },
+        computed: {
+            ...mapGetters(['getSmsCode']),
+            code:{
+                get: function(){
+                    return this.getSmsCode;
+                },
+                set: function(code){
+                    this.$store.dispatch('setSmsCode', code);
+                }
             }
         },
         methods: {

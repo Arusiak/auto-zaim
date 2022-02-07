@@ -33,7 +33,7 @@
                     <v-row class="justify-center">
                         <v-col md="12" cols="12" class="">
                             <v-text-field
-                                v-model="address"
+                                v-model="getStep2.address"
                                 :rules="addressRules"
                                 outlined
                                 label="Адрес регистрации"
@@ -43,7 +43,7 @@
                     </v-row>
                     <v-row class="justify-center" style="margin-top: -25px">
                         <v-col md="12" sm="12" cols="12">
-                            <v-checkbox class="border-green" v-model="checked">
+                            <v-checkbox class="border-green" v-model="getStep2.checked">
                                 <template v-slot:label>
                                     <div>
                                         Адрес регистрации совпадает с местом жительства
@@ -53,9 +53,9 @@
                         </v-col>
                     </v-row>
                     <v-row class="justify-center">
-                        <v-col md="12" cols="12" v-if="checked">
+                        <v-col md="12" cols="12" v-if="getStep2.checked">
                             <v-text-field
-                                v-model="address2"
+                                v-model="getStep2.address2"
                                 :rules="address2Rules"
                                 outlined
                                 label="Адрес жительства"
@@ -82,8 +82,10 @@
 </template>
 
 <script>
+    import {mapGetters} from "vuex";
+
     export default {
-        name: 'InsertData2',
+        name: 'Step2',
         data() {
             return {
                 checked: false,
@@ -98,7 +100,17 @@
                 ],
             }
         },
-
+        computed: {
+            ...mapGetters(['getStep2']),
+            step2:{
+                get: function(){
+                    return this.getStep2;
+                },
+                set: function(data){
+                    this.$store.dispatch('setStep2', {...this.getStep2, data});
+                }
+            }
+        },
         methods: {
             toggleDrawer() {
                 this.showMenu = !this.showMenu;

@@ -36,8 +36,8 @@
                                     outlined
                                     label="Сумма займа"
                                     class="custom-input"
-                                    v-model="zaimSummary"
-                                    :rules="zaimSummaryRules">
+                                    v-model="getStep1.loanSummary"
+                                    :rules="loanSummaryRules">
                                 </v-text-field>
                             </v-col>
                         </v-row>
@@ -47,8 +47,8 @@
                                     outlined
                                     label="Срок займа"
                                     class="custom-input"
-                                    v-model="zaimLimit"
-                                    :rules="zaimLimitRules">
+                                    v-model="getStep1.loanLimit"
+                                    :rules="loanLimitRules">
                                 </v-text-field>
                             </v-col>
                         </v-row>
@@ -58,8 +58,8 @@
                                     outlined
                                     label="Комфортный платёж"
                                     class="custom-input"
-                                    v-model="platoj"
-                                    :rules="platojRules">
+                                    v-model="getStep1.payment"
+                                    :rules="paymentRules">
                                 </v-text-field>
                             </v-col>
                         </v-row>
@@ -69,8 +69,8 @@
                                     outlined
                                     label="Месячный доход"
                                     class="custom-input"
-                                    v-model="doxod"
-                                    :rules="doxodRules">
+                                    v-model="getStep1.income"
+                                    :rules="incomeRules">
                                 </v-text-field>
                             </v-col>
                         </v-row>
@@ -80,7 +80,7 @@
                                     outlined
                                     label="Платежи по текущим кредитам"
                                     class="custom-input"
-                                    v-model="credits"
+                                    v-model="getStep1.credits"
                                     :rules="creditsRules">
                                 </v-text-field>
                             </v-col>
@@ -91,7 +91,7 @@
                                     outlined
                                     label="Дополнительный телефон"
                                     class="custom-input"
-                                    v-model="phone"
+                                    v-model="getStep1.phone"
                                     :rules="phoneRules">
                                 </v-text-field>
                             </v-col>
@@ -102,8 +102,8 @@
                                     outlined
                                     label="Номер авто"
                                     class="custom-input"
-                                    v-model="autoNumber"
-                                    :rules="autoNumberRules">
+                                    v-model="getStep1.carNumber"
+                                    :rules="carNumberRules">
                                 </v-text-field>
                             </v-col>
                         </v-row>
@@ -113,7 +113,7 @@
                                     outlined
                                     label="Электронная почта"
                                     class="custom-input"
-                                    v-model="email"
+                                    v-model="getStep1.email"
                                     :rules="emailRules">
                                 </v-text-field>
                             </v-col>
@@ -170,52 +170,57 @@
 </template>
 
 <script>
+    import {mapGetters} from "vuex";
+
     export default {
-        name: 'InsertData1',
+        name: 'Step1',
         data() {
             return {
                 e6: 1,
                 valid: true,
-                email: '',
                 emailRules: [
                     v => !!v || 'E-mail заполните',
                     v => /.+@.+\..+/.test(v) || 'Должен быть действителен e-mail',
                 ],
-                doxod: '',
-                doxodRules: [
+                incomeRules: [
                     v => !!v || 'Месячный доход заполните',
                     v => Number.isInteger(Number(v)) || "Значение должно быть числом",
                 ],
-                phone: '',
                 phoneRules: [
                     v => !!v || 'Телефон заполните',
                     v => Number.isInteger(Number(v)) || "Значение должно быть числом",
                 ],
-                platoj: '',
-                platojRules: [
+                paymentRules: [
                     v => !!v || 'Комфортный платёж заполните',
                     v => Number.isInteger(Number(v)) || "Значение должно быть числом",
                 ],
-                zaimLimit: '',
-                zaimLimitRules: [
+                loanLimitRules: [
                     v => !!v || 'Срок займа заполните',
                 ],
-                zaimSummary: '',
-                zaimSummaryRules: [
+                loanSummaryRules: [
                     v => !!v || 'Сумма займа заполните',
                     v => Number.isInteger(Number(v)) || "Значение должно быть числом",
                 ],
-                credits: '',
                 creditsRules: [
                     v => !!v || 'Платежи по текущим кредитам заполните',
                     v => Number.isInteger(Number(v)) || "Значение должно быть числом",
                 ],
-                autoNumber: '',
-                autoNumberRules: [
+                carNumberRules: [
                     v => !!v || 'Номер авто заполните',
                     v =>
                         /[а-яё]+/i.test(v) || "Используйте кириллицу"
                 ],
+            }
+        },
+        computed: {
+            ...mapGetters(['getStep1']),
+            code:{
+                get: function(){
+                    return this.getStep1;
+                },
+                set: function(data){
+                    this.$store.dispatch('setStep1', {...this.getStep1, data});
+                }
             }
         },
         methods: {

@@ -29,12 +29,12 @@ let routes = [
     {
         path: '/primaryAthorization',
         name: 'primary-athorization',
-        component: () => import('./components/pages/someSteps/GetMoney'),
+        component: () => import('./components/pages/steps/GetMoney'),
     },
     {
         path: '/reAuthorization',
         name: 're-authorization',
-        component: () => import('./components/pages/someSteps/ReAuthorization'),
+        component: () => import('./components/pages/steps/ReAuthorization'),
     },
     {
         path: '/refinancing',
@@ -44,22 +44,22 @@ let routes = [
     {
         path: '/financeHome ',
         name: 'welcome-home',
-        component: () => import('./components/pages/someSteps/Home'),
+        component: () => import('./components/pages/steps/Home'),
     },
     {
         path: '/stepOneForm',
         name: 'insert-data1',
-        component: () => import('./components/pages/someSteps/InsertData1'),
+        component: () => import('./components/pages/steps/Step1'),
     },
     {
         path: '/stepTwoForm',
         name: 'insert-data2',
-        component: () => import('./components/pages/someSteps/InsertData2'),
+        component: () => import('./components/pages/steps/Step2'),
     },
     {
         path: '/smsCode',
         name: 'sms-code',
-        component: () => import('./components/pages/someSteps/SMSCode'),
+        component: () => import('./components/pages/steps/SMSCode'),
     },
     {
         path: '*',
