@@ -3,7 +3,7 @@
         <v-container class="header1">
             <v-row>
                 <v-col cols="12">
-                    <v-app-bar color="white" app class="pt-2 ">
+                    <v-app-bar color="white" app class="pt-2" style="z-index: 2000">
                         <v-row style="align-items: center">
                             <v-col md="3" sm="6" cols="6" class="d-flex">
                                 <v-toolbar-title>
@@ -53,7 +53,7 @@
                                             Заказать звонок
                                         </a>
                                     </v-col>
-                                    <v-col cols="4">
+                                    <v-col cols="4" style="height: 64px !important; margin-top: -100px">
                                         <v-select
                                             item-text="title"
                                             :items="items"
@@ -139,7 +139,7 @@
                     </v-app-bar>
                 </v-col>
             </v-row>
-            <v-row style="margin-top: 64px; width: 100%; overflow-x: auto" v-if="this.$route.name === 'app-home'">
+            <v-row style="margin-top: 64px; width: 100%; overflow-x: auto; position: relative; z-index: 1000" v-if="this.$route.name === 'app-home'">
                 <v-col cols="8" class="d-flex">
                     <span v-for="item in secondaryMenu" :key="item.icon">
                         <router-link :to="{ name: item.route }" class="header-bar-item">
