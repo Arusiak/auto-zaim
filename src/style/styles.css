@@ -454,7 +454,7 @@ border: none !important;
     font-size: 12px;
     line-height: 14px;
     text-align: center;
-    margin-top: -10px;
+    margin-top: -4px;
 }
 .green-select > .v-input__control > .v-input__slot .v-select__slot > .v-input__append-inner {
     margin-top: unset;
@@ -481,6 +481,11 @@ border: none !important;
 
 .slider-input > .v-input__control{
     margin-top: -10px !important;
+}
+
+.header-btn{
+    width: 160px;
+    height: 41px !important;
 }
 @media screen and (max-width: 1263px) {
     .font-14-text {

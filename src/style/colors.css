@@ -8,8 +8,7 @@ span{
 
 .text-green, .green-select fieldset{
     color: #4BAF32 !important;
-
-    height: 40px!important;
+    height: 45px!important;
 }
 
 .green-select fieldset {
@@ -18,6 +17,7 @@ span{
 
 .green-select .v-input__append-inner {
     color: #4BAF32 !important;
+    padding-top: 8px;
 }
 
 .green-select>.v-input__control>.v-input__slot>.v-select__slot>label {

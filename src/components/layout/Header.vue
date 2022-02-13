@@ -48,12 +48,11 @@
                                         <a
                                             class="link-green font-14-text-md"
                                             target="_blank"
-                                            style="text-decoration: none"
                                             @click.stop="dialog = true">
                                             Заказать звонок
                                         </a>
                                     </v-col>
-                                    <v-col cols="4" style="height: 64px !important; margin-top: -100px">
+                                    <v-col cols="4" style="height: 64px !important; margin-top: -114px">
                                         <v-select
                                             item-text="title"
                                             :items="items"
@@ -65,7 +64,8 @@
                                         <router-link :to="{name: 'insert-data1'}" target= '_blank' style="text-decoration: none">
                                             <v-btn
                                                 depressed
-                                                class="green-btn pa-3 font-12 mt-1">
+                                                class="green-btn pa-3 font-12 header-btn"
+                                                style="margin-top: -4px">
                                                 Получить займ
                                             </v-btn>
                                         </router-link>
