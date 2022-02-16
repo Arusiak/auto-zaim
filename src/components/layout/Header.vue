@@ -3,7 +3,7 @@
         <v-container class="header1">
             <v-row>
                 <v-col cols="12">
-                    <v-app-bar color="white" app class="pt-2" style="z-index: 2000">
+                    <v-app-bar color="white" app class="pt-2" style="z-index: 2000;" :class="this.$route.name === 'app-home' ? `box-shadow-none` : ``">
                         <v-row style="align-items: center">
                             <v-col md="3" sm="6" cols="6" class="d-flex">
                                 <v-toolbar-title>
@@ -42,7 +42,7 @@
                             <v-col cols="5" class="d-flex justify-end">
                             <v-toolbar-items class="hidden-sm-and-down">
                                 <v-row class="align-center justify-end">
-                                    <v-col cols="4" class="text-right">
+                                    <v-col cols="4" class="text-right" style="padding-bottom: 14px">
                                         <b class="header-bar-item font-17 font-14-text-md"  style="letter-spacing: 0.05em; margin: unset">8 800-505-21-65</b><br/>
                                         <img :src="phoneIconSm"/>
                                         <a
